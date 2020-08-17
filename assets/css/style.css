@@ -1,0 +1,47 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+@font-face{
+    font-family: poppins;
+    src: url(./assets/Poppins-Regular.ttf);
+}
+body{
+    font-family: poppins;
+}
+
+/* praditya */
+.wrap-nav{
+    position: fixed;
+    height: auto;
+    width: 100%;
+    background-color: #0F0F0F;
+}
+nav{
+    height: 80px;
+    width: 75%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    height: 40px;
+    width: 40px;
+}
+.logo img{
+    height: 100%;
+}
+.menu-links{
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
+}
+.menu-link{
+    list-style: none;
+}
+.menu-link a{
+    color: white;
+    text-decoration: none;
+}
