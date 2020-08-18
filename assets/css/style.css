@@ -7,6 +7,10 @@
     font-family: poppins;
     src: url(./assets/Poppins-Regular.ttf);
 }
+html{
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
 body{
     font-family: poppins;
 }
@@ -44,4 +48,106 @@ nav{
 .menu-link a{
     color: white;
     text-decoration: none;
+}
+
+/* section praditya */
+main{
+}
+.section{
+    height: 95vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    scroll-snap-align: end;
+}
+.wrap-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.text{
+    width: 500px;
+    text-align: center;
+    color: rgb(224, 224, 224);
+    margin-top: 5px;
+}
+.text h1{
+    font-size: 72px;
+    font-weight: 600;
+}
+.text p{
+    margin-top: 5px;
+    font-size: 17px;
+}
+.illustration{
+    height: 150px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.illustration img{
+    height: 100%;
+}
+.readMore-button{
+    width: 150px;
+    height: 47px;
+    background: none;
+    border: 3px solid white;
+    border-radius: 60px;
+    margin-top: 20px;
+    font-size: 17px;
+    color: rgb(224, 224, 224);
+    cursor: pointer;
+    outline: none;
+}
+
+/* seciton 2 praditya*/
+.section2{
+    background-image: url(../img/section2.jpg);
+}
+.section3{
+    background-image: url(../img/section3.jpg);
+}
+.section1{
+    background-image: url(../img/section1.jpg);
+}
+@media only screen and (max-width:768px){
+    .menu-links{
+        display: none;
+    }
+    .illustration{
+        height: 100px;
+    }
+    .text{
+        width: 300px;
+    }
+    .text h1{
+        font-size: 42px;
+    }
+    .text p{
+        font-size: 16px;
+    }
+}
+@media only screen and (max-width:320px){
+    /* section praditya */
+    .illustration{
+        height: 80px;
+    }
+    .text{
+        width: 280px;
+    }
+    .text h1{
+        font-size: 24px;
+    }
+    .text p{
+        font-size: 14px;
+    }
+    .readMore-button{
+        font-size: 17px;
+    }
 }
