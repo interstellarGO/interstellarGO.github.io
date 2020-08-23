@@ -3,14 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>interstellar</title>
+    <title>Interstellar</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
     <!-- navigation -->
-    <div class="wrap-nav">
+    <div class="wrap-nav" id="navbar">
       <nav>
-        <div class="logo">
+        <div
+          class="logo"
+          onclick="window.location.href = 'index.html'"
+          style="cursor: pointer;"
+        >
           <img
             class="img-logo"
             src="./assets/img/rocket.svg"
@@ -20,7 +24,7 @@
         <input type="checkbox" name="" class="toggler" id="" />
         <div class="hamburger"><div></div></div>
         <ul class="menu-links">
-          <div>
+          <div id="menu-links">
             <li class="menu-link"><a href="#tentang">Tentang</a></li>
             <li class="menu-link"><a href="#galeri">Galeri</a></li>
             <li class="menu-link"><a href="#produk">Produk</a></li>
@@ -45,8 +49,10 @@
               iusto ex debitis.
             </p>
           </div>
-          <a href="#" class="wrap-readMore-button">
-            <button class="readMore-button">Read More</button>
+          <a href="tentang.html" class="wrap-readMore-button">
+            <button class="readMore-button">
+              Read More
+            </button>
           </a>
         </div>
       </div>
@@ -92,4 +98,6 @@
       </div>
     </main>
   </body>
+  <!-- Script -->
+  <script src="./assets/js/script.js"></script>
 </html>
