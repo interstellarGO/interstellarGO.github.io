@@ -346,10 +346,15 @@ nav {
   }
 }
 /* Produk Deo */
+#main-content {
+  width: 70%;
+  margin: 0 auto;
+}
+
 .bagian {
   margin: 0 auto;
   width: 70%;
-  height: 95vh;
+  height: 100vh;
   width: 100%;
   display: flex;
   background-repeat: no-repeat;
@@ -372,9 +377,25 @@ nav {
 .text-produk p {
   width: 703px;
   color: #ebebeb;
-  font-size: 36px;
+  font-size: 32px;
 }
+/* mini bagian1 */
+@media only screen and (max-width: 768px) {
+  .text-produk h1 {
+    width: 450px;
+    font-size: 36px;
+  }
+  .text-produk p {
+    width: 450px;
+    font-size: 18px;
+  }
+}
+/* end mini bagian1 */
+
 /* bagian 2 */
+.pratinjau {
+  display: flex;
+}
 .bagian2 {
   display: flex;
   flex-direction: column;
@@ -389,17 +410,36 @@ nav {
   font-size: 24px;
   width: 603px;
 }
-.gambar1 {
-  width: 407px;
-  height: 486px;
+.gambar1 img {
+  width: 557px;
+  height: 636px;
 }
-.pratinjau {
-  display: flex;
+.button-pratinjau {
+  margin-top: 25px;
+  font-size: 24px;
+  color: #ebebeb;
+  width: 164px;
+  height: 37px;
+  background: #000000;
+  border: 3px solid #ebebeb;
 }
-#main-content {
-  width: 70%;
-  margin: 0 auto;
+/* mini bagian2 */
+@media only screen and (max-width: 768px) {
+  .text-produk h2 {
+    width: 350px;
+    font-size: 36px;
+  }
+  .text-produk h3 {
+    width: 350px;
+    font-size: 18px;
+  }
+  .gambar1 img {
+    height: 257px;
+    width: 336px;
+  }
 }
+/* end mini bagian2 */
+/* Bagian 3 */
 .bagian3 {
   display: flex;
   align-items: center;
@@ -409,19 +449,11 @@ nav {
 .gambar2 {
   display: grid;
   grid-template-columns: repeat(3, 300px);
-  row-gap: 50px;
+  gap: 80px;
 }
 .gambar2 img {
   width: 260px;
   height: 260px;
   object-fit: cover;
 }
-.button-pratinjau {
-  margin-top: 5px;
-  font-size: 24px;
-  color: #ebebeb;
-  width: 164px;
-  height: 37px;
-  background: #000000;
-  border: 3px solid #ebebeb;
-}
+/* akhir Deo */
