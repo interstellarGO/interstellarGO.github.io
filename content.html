@@ -7,23 +7,32 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
-    <!-- navigation -->
-    <div class="wrap-nav">
-      <nav>
-        <div class="logo">
-          <img src="./assets/img/rocket.svg" alt="interstellar logo" />
-        </div>
-        <input type="checkbox" name="" class="toggler" id="" />
-        <div class="hamburger"><div></div></div>
-        <ul class="menu-links">
-          <div>
-            <li class="menu-link"><a href="#tentang">Tentang</a></li>
-            <li class="menu-link"><a href="#galeri">Galeri</a></li>
-            <li class="menu-link"><a href="#produk">Produk</a></li>
+      <!-- navigation -->
+      <div class="wrap-nav" id="navbar">
+        <nav>
+          <div
+            class="logo"
+            onclick="window.location.href = 'index.html'"
+            style="cursor: pointer;"
+          >
+            <img
+              class="img-logo"
+              src="./assets/img/rocket.svg"
+              alt="interstellar logo"
+            />
           </div>
-        </ul>
-      </nav>
-    </div>
+          <input type="checkbox" name="" class="toggler" id="" />
+          <div class="hamburger"><div></div></div>
+          <ul class="menu-links">
+            <div id="menu-links">
+              <li class="menu-link"><a href="tentang.html">Tentang</a></li>
+              <li class="menu-link"><a href="galeri.html">Galeri</a></li>
+              <li class="menu-link"><a href="content.html">Produk</a></li>
+            </div>
+          </ul>
+        </nav>
+      </div>
+  
     <!-- konten -->
 
     <!-- Page Judul -->
@@ -37,7 +46,7 @@
       </div>
     </div>
     <!-- Page Pratinjau -->
-    <main>
+    <main id="main-content">
 <div class="pratinjau">
   <div class="bagian bagian2">
     <div class="text-produk">
@@ -75,4 +84,5 @@
 </div>
     </main>
   </body>
+  <script src="./assets/js/script.js"></script>
 </html>

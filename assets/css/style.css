@@ -379,8 +379,6 @@ nav {
   display: flex;
   flex-direction: column;
 }
-
-}
 .text-produk h2 {
   color: #ebebeb;
   font-weight: 800;
@@ -398,33 +396,32 @@ nav {
 .pratinjau {
   display: flex;
 }
-main {
+#main-content {
   width: 70%;
   margin: 0 auto;
 }
-.bagian3{
+.bagian3 {
   display: flex;
   align-items: center;
   width: 100%;
   justify-content: center;
-
 }
-.gambar2{
+.gambar2 {
   display: grid;
-  grid-template-columns: repeat(3,300px);
+  grid-template-columns: repeat(3, 300px);
   row-gap: 50px;
 }
-.gambar2 img{
+.gambar2 img {
   width: 260px;
   height: 260px;
   object-fit: cover;
 }
-.button-pratinjau{
+.button-pratinjau {
   margin-top: 5px;
   font-size: 24px;
-  color: #EBEBEB;
-width: 164px;
-height: 37px;
-background: #000000;
-border: 3px solid #EBEBEB;
+  color: #ebebeb;
+  width: 164px;
+  height: 37px;
+  background: #000000;
+  border: 3px solid #ebebeb;
 }
