@@ -9,9 +9,9 @@
 }
 html {
   scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
 }
 body {
+  background-color: black;
   font-family: poppins;
 }
 
@@ -140,8 +140,7 @@ nav {
 }
 
 /* section praditya */
-main {
-}
+
 .section {
   height: 95vh;
   width: 100%;
@@ -262,4 +261,87 @@ main {
   .readMore-button {
     font-size: 17px;
   }
+}
+/* Produk Deo */
+.bagian {
+  margin: 0 auto;
+  width: 70%;
+  height: 95vh;
+  width: 100%;
+  display: flex;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  scroll-snap-align: end;
+}
+.bagian1 {
+  background-image: url("../img/bagian1.jpg");
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.text-produk h1 {
+  color: #ebebeb;
+  font-weight: 800;
+  font-size: 64px;
+}
+.text-produk p {
+  width: 703px;
+  color: #ebebeb;
+  font-size: 36px;
+}
+/* bagian 2 */
+.bagian2 {
+  display: flex;
+  flex-direction: column;
+}
+
+}
+.text-produk h2 {
+  color: #ebebeb;
+  font-weight: 800;
+  font-size: 64px;
+}
+.text-produk h3 {
+  color: #ebebeb;
+  font-size: 24px;
+  width: 603px;
+}
+.gambar1 {
+  width: 407px;
+  height: 486px;
+}
+.pratinjau {
+  display: flex;
+}
+main {
+  width: 70%;
+  margin: 0 auto;
+}
+.bagian3{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+
+}
+.gambar2{
+  display: grid;
+  grid-template-columns: repeat(3,300px);
+  row-gap: 50px;
+}
+.gambar2 img{
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+}
+.button-pratinjau{
+  margin-top: 5px;
+  font-size: 24px;
+  color: #EBEBEB;
+width: 164px;
+height: 37px;
+background: #000000;
+border: 3px solid #EBEBEB;
 }
