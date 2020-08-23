@@ -3,77 +3,100 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>interstellar</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Interstellar</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
-    
     <!-- navigation -->
-    <div class="wrap-nav">
+    <div class="wrap-nav" id="navbar">
       <nav>
-        <div class="logo">
-          <img class="img-logo" src="/assets/img/rocket.svg" alt="interstellar logo">
+        <div
+          class="logo"
+          onclick="window.location.href = 'index.html'"
+          style="cursor: pointer;"
+        >
+          <img
+            class="img-logo"
+            src="./assets/img/rocket.svg"
+            alt="interstellar logo"
+          />
         </div>
+        <input type="checkbox" name="" class="toggler" id="" />
+        <div class="hamburger"><div></div></div>
         <ul class="menu-links">
-          <li class="menu-link"><a href="#">Tentang</a></li>
-          <li class="menu-link"><a href="#">Galeri</a></li>
-          <li class="menu-link"><a href="#">Produk</a></li>
+          <div id="menu-links">
+            <li class="menu-link"><a href="tentang.html">Tentang</a></li>
+            <li class="menu-link"><a href="galeri.html">Galeri</a></li>
+            <li class="menu-link"><a href="content.html">Produk</a></li>
+          </div>
         </ul>
       </nav>
     </div>
-
     <!-- konten -->
     <main>
-
       <!-- section1 -->
-      <div class="section section1">
+      <div class="section section1" id="tentang">
         <div class="wrap-section">
           <div class="illustration">
-            <img src="./assets/img/rocket.svg" alt="interstellar logo">
+            <img src="./assets/img/rocket.svg" alt="interstellar logo" />
           </div>
           <div class="text">
             <h1>interstellar</h1>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt saepe asperiores dignissimos deleniti labore illo. Tenetur facere iusto ex debitis.</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt
+              saepe asperiores dignissimos deleniti labore illo. Tenetur facere
+              iusto ex debitis.
+            </p>
           </div>
-          <a href="#" class="wrap-readMore-button">
-            <button class="readMore-button">Read More</button>
+          <a href="tentang.html" class="wrap-readMore-button">
+            <button class="readMore-button">
+              Read More
+            </button>
           </a>
         </div>
       </div>
 
       <!-- section1 -->
-      <div class="section section2">
+      <div class="section section2" id="galeri">
         <div class="wrap-section">
           <div class="illustration">
-            <img src="./assets/img/gallery.svg" alt="interstellar galeri">
+            <img src="./assets/img/gallery.svg" alt="interstellar galeri" />
           </div>
           <div class="text">
             <h1>Galeri</h1>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt saepe asperiores dignissimos deleniti labore illo. Tenetur facere iusto ex debitis.</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt
+              saepe asperiores dignissimos deleniti labore illo. Tenetur facere
+              iusto ex debitis.
+            </p>
           </div>
-          <a href="#" class="wrap-readMore-button">
+          <a href="galeri.html" class="wrap-readMore-button">
             <button class="readMore-button">Read More</button>
           </a>
         </div>
       </div>
 
       <!-- section1 -->
-      <div class="section section3">
+      <div class="section section3" id="produk">
         <div class="wrap-section">
           <div class="illustration">
-            <img src="./assets/img//smartphone.svg" alt="interstellar produk">
+            <img src="./assets/img//smartphone.svg" alt="interstellar produk" />
           </div>
           <div class="text">
             <h1>Produk Kami</h1>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt saepe asperiores dignissimos deleniti labore illo. Tenetur facere iusto ex debitis.</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt
+              saepe asperiores dignissimos deleniti labore illo. Tenetur facere
+              iusto ex debitis.
+            </p>
           </div>
-          <a href="#" class="wrap-readMore-button">
+          <a href="content.html" class="wrap-readMore-button">
             <button class="readMore-button">Read More</button>
           </a>
         </div>
       </div>
-
     </main>
-
   </body>
+  <!-- Script -->
+  <script src="./assets/js/script.js"></script>
 </html>
