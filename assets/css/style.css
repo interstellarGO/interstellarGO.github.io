@@ -269,6 +269,11 @@ nav {
   margin: 2rem 10px;
 }
 
+HEAD
+/* section praditya */
+.section{
+    height: 95vh;
+}
 @media only screen and (min-width: 769px) {
   .toggler {
     display: none;
