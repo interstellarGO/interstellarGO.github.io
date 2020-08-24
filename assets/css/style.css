@@ -448,7 +448,7 @@ HEAD
   .gambar1 img {
     position: absolute;
     left: 25%;
-    top: 100%%;
+    top: 100%;
     width: 261px;
     height: 314px;
   }
@@ -459,7 +459,6 @@ HEAD
     width: 108px;
     height: 35px;
     font-size: 18px;
-  }
 }
 /* end mini bagian2 */
 /* Bagian 3 */
@@ -489,4 +488,5 @@ HEAD
     top: 200%;
   }
 }
+/* akhir mini bagian 3 */
 /* akhir Deo */
