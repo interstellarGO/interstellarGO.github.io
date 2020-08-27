@@ -1,18 +1,26 @@
-*{
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Poppins Regular"), local("Poppins-Regular"),
+    url(/assets/Poppins-Regular.ttf) format("ttf");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: sans-serif;
 }
-@font-face {
-  font-family: poppins;
-  src: url("/assets/Poppins-Regular.ttf");
-}
-html{
+html {
   scroll-behavior: smooth;
 }
 body {
   background-color: black;
-  font-family: poppins;
+  font-family: "Poppins";
 }
 
 /* Navbar  */
@@ -201,10 +209,10 @@ nav {
 .section.section3 {
   background-image: url("../img/sectionBeranda/phone-touch.jpg");
 }
-/* Section Tentang */
+/* ******************************
+* SECTION TENTANG  */
 .section-b {
   width: 100%;
-  height: 100vh;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -212,21 +220,22 @@ nav {
 .section-b.section1 {
   background-position: right;
   background-image: url("../img/sectionTentang/woman-with-headset.png");
+  height: 100vh;
 }
-.plate-section1 .text-left {
+.section-b.section1 .plate-section1 .text-left {
   width: 70%;
 }
-.plate-section1 .text-left div {
+.section-b.section1 .plate-section1 .text-left div {
   width: 70%;
   margin: auto;
 }
-.plate-section1 .text-left p {
+.section-b.section1 .plate-section1 .text-left p {
   padding-top: 1rem;
 }
-.plate-section1 .text-right {
+.section-b.section1 .plate-section1 .text-right {
   width: 50%;
 }
-.plate-section1 {
+.section-b.section1 .plate-section1 {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -240,7 +249,7 @@ nav {
   color: #fff;
   min-height: 100vh;
 }
-.plate-section2 {
+.section-b.section2 .plate-section2 {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -264,7 +273,44 @@ nav {
   justify-content: center;
 }
 .partner .brand div {
-  margin: 2rem 10px;
+  margin: 2rem 20px;
+  font-size: 30px;
+  color: rgb(179, 179, 179);
+}
+/* Section 3 */
+.section-b.section3 {
+  background-position: right;
+  background-image: url("../img/sectionTentang/night-sky.png");
+  padding-bottom: 10rem;
+}
+.text.text-judul {
+  width: 100%;
+  text-align: center;
+  padding: 10rem 0 5rem;
+  color: #fff;
+}
+.row.row-team {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 80px;
+}
+.card.card-profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card.card-profile img {
+  width: 155px;
+  height: 155px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 100%;
+}
+.card .card-title {
+  color: rgb(255, 255, 255);
+  margin-top: 25px;
+  font-size: 30px;
 }
 @media only screen and (min-width: 769px) {
   .toggler {
@@ -306,15 +352,11 @@ nav {
     font-size: 16px;
   }
   /* Page tentang */
-  .plate-section1 .text-right {
-    width: 0;
-  }
-  .plate-section1 .text-left {
+  .section-b.section1 .plate-section1 .text-left {
     width: 100%;
   }
-  .plate-section1 .text-left div {
-    width: 85%;
-    text-align: center;
+  .section-b.section1 .plate-section1 .text-right {
+    width: 0%;
   }
   .plate-section2 {
     flex-direction: column;
@@ -322,6 +364,24 @@ nav {
   .plate-section2 .text-left h1,
   .plate-section2 .text-right h1 {
     font-size: 100px;
+  }
+  .partner .brand {
+    display: block;
+  }
+  .section-b.section2 {
+    background: #000000;
+    color: #fff;
+    height: 600px;
+  }
+  .section-b.section2 {
+    background: #000000;
+    color: #fff;
+    min-height: 130vh;
+  }
+  .row.row-team {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 80px;
   }
 }
 @media only screen and (max-width: 320px) {
@@ -419,6 +479,7 @@ nav {
   background: #000000;
   border: 3px solid #ebebeb;
 }
+
 /* mini bagian2 */
 @media only screen and (max-width: 768px) {
   .text-produk h2 {
@@ -474,131 +535,140 @@ nav {
 /* akhir Deo */
 
 /* galeri */
-.galeri{
+.galeri {
   padding-top: 120px;
   width: 70%;
   margin: 0 auto;
 }
-.galeri h1{
+.galeri h1 {
   font-size: 72px;
   color: white;
   text-align: center;
 }
-.bulan{
+.bulan {
   margin-top: 50px;
 }
-.bulan h3{
+.bulan h3 {
   color: white;
   font-weight: 400;
   margin-bottom: 20px;
 }
-.images-galeri{
+.images-galeri {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(2, 300px);
   grid-gap: 20px;
 }
-.img-galeri{
+.img-galeri {
   height: 100%;
   width: 100%;
   overflow: hidden;
 }
-.img-galeri img{
+.img-galeri img {
   width: 100%;
 }
-.img-1{
+.img-1 {
   grid-column: 1/7;
 }
-.img-2{
+.img-2 {
   grid-column: 7/10;
 }
-.img-3{
+.img-3 {
   grid-column: 10/13;
 }
-.img-3 img{
+.img-3 img {
   height: 100%;
   width: auto;
 }
-.img-4{
+.img-4 {
   grid-column: 1/6;
 }
-.img-5{
+.img-5 {
   grid-column: 6/13;
 }
-.galeri-november{
-  grid-template-rows: repeat(3,300px);
+.galeri-november {
+  grid-template-rows: repeat(3, 300px);
 }
-.img-9{
+.img-9 {
   grid-column: 1/8;
 }
-.img-10{
+.img-10 {
   grid-column: 8/13;
 }
-.img-11{
+.img-11 {
   grid-column: 1/4;
 }
-.img-12{
+.img-12 {
   grid-column: 4/7;
 }
-.img-13{
+.img-13 {
   grid-column: 7/10;
 }
-.img-14{
+.img-14 {
   grid-column: 10/13;
 }
-@media only screen and (max-width: 1024px){
-  .images-galeri{
-    grid-template-rows: repeat(2,200px);
+@media only screen and (max-width: 1024px) {
+  .images-galeri {
+    grid-template-rows: repeat(2, 200px);
   }
-  .galeri-november{
-    grid-template-rows: repeat(3,200px);
-  }
-}
-@media only screen and ( max-width: 768px){
-  .images-galeri{
-    grid-template-rows: repeat(2,150px);
-  }
-  .galeri-november{
-    grid-template-rows: repeat(3,150px);
+  .galeri-november {
+    grid-template-rows: repeat(3, 200px);
   }
 }
-@media only screen and (max-width: 425px){
-  .images-galeri{
-    grid-template-rows: repeat(3,110px);
+@media only screen and (max-width: 768px) {
+  .images-galeri {
+    grid-template-rows: repeat(2, 150px);
   }
-  .galeri-november{
-    grid-template-rows: repeat(5,110px);
+  .galeri-november {
+    grid-template-rows: repeat(3, 150px);
   }
-  .img-1,.img-3{
+}
+@media only screen and (max-width: 425px) {
+  .images-galeri {
+    grid-template-rows: repeat(3, 110px);
+  }
+  .galeri-november {
+    grid-template-rows: repeat(5, 110px);
+  }
+  .img-1,
+  .img-3 {
     grid-column: 1/7;
   }
-  .img-2,.img-4{
+  .img-2,
+  .img-4 {
     grid-column: 7/13;
   }
-  .img-5{
+  .img-5 {
     grid-column: 1/13;
   }
-  .img-3 img{
+  .img-3 img {
     height: auto;
     width: 100%;
   }
 
-  .img-6,.img-8,.img-10,.img-12,.img-14{
+  .img-6,
+  .img-8,
+  .img-10,
+  .img-12,
+  .img-14 {
     grid-column: 1/7;
   }
-  .img-7,.img-9,.img-11,.img-13{
+  .img-7,
+  .img-9,
+  .img-11,
+  .img-13 {
     grid-column: 7/13;
   }
 }
-@media only screen and (max-width: 375px){
-  .images-galeri{
-    grid-template-rows: repeat(5,200px);
+@media only screen and (max-width: 375px) {
+  .images-galeri {
+    grid-template-rows: repeat(5, 200px);
   }
-  .galeri-november{
-    grid-template-rows: repeat(9,200px);
+  .galeri-november {
+    grid-template-rows: repeat(9, 200px);
   }
-  .img-galeri{
+  .img-galeri {
     grid-column: 1/13;
   }
 }
