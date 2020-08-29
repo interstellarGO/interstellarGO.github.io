@@ -752,3 +752,58 @@ footer .plate-footer {
     grid-column: 1/13;
   }
 }
+/* w3school */
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+}
+
+.preview-middle {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.preview-bottom {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+.container:hover .preview-middle {
+  opacity: 1;
+}
+.container:hover .preview-bottom {
+  opacity: 1;
+}
+.text-middle {
+  color: #ebebeb;
+  font-size: 1.5rem;
+}
+.text-bottom {
+  border: 3px solid white;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  padding: 10px 22px;
+}
+/* w3school */
