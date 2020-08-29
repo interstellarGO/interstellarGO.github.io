@@ -22,6 +22,10 @@ body {
   background-color: black;
   font-family: "Poppins";
 }
+.container {
+  width: 1028px;
+  margin: auto;
+}
 
 /* Navbar  */
 .wrap-nav {
@@ -222,6 +226,7 @@ nav {
   background-image: url("../img/sectionTentang/woman-with-headset.png");
   height: 100vh;
 }
+
 .section-b.section1 .plate-section1 .text-left {
   width: 70%;
 }
@@ -244,11 +249,15 @@ nav {
   width: 100%;
   height: 100%;
 }
+.section-b.section1 p {
+  font-size: 21px;
+}
 .section-b.section2 {
   background: #000000;
   color: #fff;
-  min-height: 100vh;
+  min-height: fit-content;
 }
+
 .section-b.section2 .plate-section2 {
   display: flex;
   justify-content: space-around;
@@ -290,27 +299,53 @@ nav {
   color: #fff;
 }
 .row.row-team {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  gap: 80px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
 }
 .card.card-profile {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 0 20px;
 }
 .card.card-profile img {
-  width: 155px;
-  height: 155px;
+  width: 249px;
+  height: 249px;
   object-fit: cover;
   object-position: center;
-  border-radius: 100%;
 }
 .card .card-title {
   color: rgb(255, 255, 255);
   margin-top: 25px;
+  font-size: 35px;
+}
+/* Section 4 */
+.section-b.section4 .plate-section4 {
+  display: flex;
+  justify-content: center;
+}
+.plate-section4 .text-left,
+.plate-section4 .text-right {
+  color: #fff;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.plate-section4 .text-left {
   font-size: 30px;
+  padding: 200px 0;
+}
+.plate-section4 .text-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  -o-object-fit: cover;
+  object-position: center;
+  -o-object-position: center;
 }
 @media only screen and (min-width: 769px) {
   .toggler {
@@ -338,6 +373,29 @@ nav {
   }
 }
 
+/* ********************************************************************
+* Bagian Footer
+******************************************************************** */
+#con-footer {
+  background: #141414;
+}
+.copyright {
+  background: rgb(14, 14, 14);
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+footer .plate-footer {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  padding: 2em 0;
+}
+.plate-footer .right-side,
+.plate-footer .left-side {
+  padding: 20px;
+}
+
 @media only screen and (max-width: 768px) {
   .illustration {
     height: 100px;
@@ -358,6 +416,9 @@ nav {
   .section-b.section1 .plate-section1 .text-right {
     width: 0%;
   }
+  .section-b.section1 p {
+    font-size: 16px;
+  }
   .plate-section2 {
     flex-direction: column;
   }
@@ -376,12 +437,30 @@ nav {
   .section-b.section2 {
     background: #000000;
     color: #fff;
-    min-height: 130vh;
+    min-height: fit-content;
   }
   .row.row-team {
     display: grid;
     grid-template-columns: auto;
     gap: 80px;
+  }
+  /* Section 4 */
+  .section-b.section4 {
+    background: url("../img/bagian1.jpg");
+    background-size: cover;
+    background-position: right;
+  }
+  .section-b.section4 .plate-section4 {
+    display: block;
+    justify-content: center;
+  }
+  .section-b.section4 .plate-section4 .text-left {
+  }
+  .section-b.section4 .plate-section4 .text-right {
+    display: none;
+  }
+  .plate-section4 .text-left {
+    font-size: 20px;
   }
 }
 @media only screen and (max-width: 320px) {
@@ -435,6 +514,7 @@ nav {
   color: #ebebeb;
   font-size: 32px;
 }
+
 /* mini bagian1 */
 @media only screen and (max-width: 768px) {
   .text-produk h1 {
