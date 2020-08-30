@@ -14,6 +14,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: sans-serif;
+  overflow: h;
 }
 html {
   scroll-behavior: smooth;
@@ -384,7 +385,10 @@ nav {
 #con-footer {
   background: #141414;
 }
-.con-footer .container {
+.foot-margin {
+  margin-top: 3em;
+}
+#con-footer .container {
   width: 1028px;
   margin: auto;
 }
@@ -412,6 +416,7 @@ footer .plate-footer {
   width: 100%;
   height: 100%;
   display: flex;
+  visibility: hidden;
   align-items: center;
   justify-content: center;
   animation-name: "popup";
@@ -625,14 +630,14 @@ footer .plate-footer {
 /* bagian 2 */
 .pratinjau {
   display: flex;
+  overflow: hidden;
 }
 .bagian2 {
-  padding-top: 15%;
+  padding: 15% 10px 0;
+  width: 50%;
   display: flex;
   flex-direction: column;
-}
-.text-produk {
-  padding: 0 20px;
+  justify-content: start;
 }
 .text-produk h2 {
   color: #ebebeb;
@@ -642,15 +647,17 @@ footer .plate-footer {
 .text-produk h3 {
   color: #ebebeb;
   font-size: 24px;
-  width: 603px;
+  width: 100%;
 }
-
+.gambar1 {
+  width: 50%;
+  padding: 20px;
+}
 .gambar1 img {
-  width: 557px;
-  height: 636px;
+  width: 100%;
 }
 .button-pratinjau {
-  margin: 35px 20px 0;
+  margin: 35px 0;
   font-size: 24px;
   color: #ebebeb;
   width: 164px;
@@ -699,6 +706,7 @@ footer .plate-footer {
   display: flex;
   justify-content: center;
   width: 100%;
+  height: fit-content;
 }
 .gambar2 {
   display: grid;

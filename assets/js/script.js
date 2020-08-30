@@ -13,9 +13,9 @@ window.onscroll = function () {
 
 function myPopup() {
   var x = document.getElementById("popup");
-  if (x.style.display == "none") {
-    x.style.display = "flex";
+  if (x.style.visibility == "hidden") {
+    x.style.visibility = "visible";
   } else {
-    x.style.display = "none";
+    x.style.visibility = "hidden";
   }
 }
