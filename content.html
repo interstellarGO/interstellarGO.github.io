@@ -56,12 +56,14 @@
     </div>
     <div class="text-produk">
       <h3>
-       Salah satu produk yang sudah kami kerjakan
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates
+        sit quiga laudantium, libero voluptatibus iste cum veritatis placeat
+        fugiat culpa ab corrupti
       </h3>
     </div>
-<a href="#bagian3"><button class="button-pratinjau">
+<button onclick="myPopup()" class="button-pratinjau">
       Pratinjau
-    </button></a>
+    </button>
 </div>
 <div class="gambar1">
   <img src="/assets/img/gambar1.png"></img>
@@ -128,51 +130,25 @@
       </div>
     </div>
   </div>
+
 </div>
-    </main>
-          <!-- Footer -->
-          <div id="con-footer">
-            <div class="container">
-              <footer>
-                <div class="plate-footer">
-                  <div class="left-side">
-                    <h1>Interstellar</h1>
-                    <br />
-                    <p>
-                      Adalah startup untuk perusahaan anda yang ingin meningkatkan
-                      bisnis ke level selanjutnya
-                    </p>
-                    <br />
-                    <p>Follow our Social Media On:</p>
-                    <div class="social-media">
-                      <a href="#">Instagram</a>
-                      <a href="#">Twitter</a>
-                      <a href="#">LinkedIn</a>
-                    </div>
-                  </div>
-                  <div class="right-side">
-                    <b>Interstellar Software House </b>
-                    <br />
-                    <p>
-                      Jl. Soekarno Hatta no. 38 Kec Pahlawan Provinsi DIY.
-                      Yogyakarta - 34009
-                    </p>
-                    <br />
-                    <b>Phone: </b>+62 0892 6525 16
-                    <br />
-                    <b>Fax: </b>+62 2134 5653 44
-                    <br />
-                    <b>Official Email: </b>house@interstellar.co
-                    <br />
-                    <b>Marketing Email: </b>house@interstellar.co
-                  </div>
-                </div>
-              </footer>
-            </div>
-            <div class="copyright">
-              <div>&copy; 2020 <b>Interstellar</b> All Rights Reserved.</div>
-            </div>
-          </div>
+    </main> 
+
+    <!-- popup -->
+    <div class="popup produk" id="popup">
+      <div class="plate">
+        <div class="left-side">
+          <img src="/assets/img/preview.png" alt="preview image">
+        </div>
+        <div class="right-side">
+          <div class="judul"><h1>
+            Contoh judul
+          </h1></div>
+          <div class="deskripsi">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut natus exercitationem rem corrupti molestiae maiores perferendis maxime totam doloribus recusandae.</div>
+        </div>
+      </div>
+      <div class="btn-close" onclick="myPopup()" style="cursor: pointer;">&times;</div>
+    </div>
   </body>
   <script src="./assets/js/script.js"></script>
 </html>
