@@ -22,10 +22,6 @@ body {
   background-color: black;
   font-family: "Poppins";
 }
-.container {
-  width: 1028px;
-  margin: auto;
-}
 
 /* Navbar  */
 .wrap-nav {
@@ -347,6 +343,14 @@ nav {
   object-position: center;
   -o-object-position: center;
 }
+.social-media a {
+  text-decoration: none;
+  color: rgb(27, 114, 172);
+}
+.social-media a img.ico-small {
+  width: 30px;
+  margin-right: 5px;
+}
 @media only screen and (min-width: 769px) {
   .toggler {
     display: none;
@@ -378,6 +382,10 @@ nav {
 ******************************************************************** */
 #con-footer {
   background: #141414;
+}
+.con-footer .container {
+  width: 1028px;
+  margin: auto;
 }
 .copyright {
   background: rgb(14, 14, 14);
