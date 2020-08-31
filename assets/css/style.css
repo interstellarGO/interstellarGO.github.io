@@ -389,7 +389,7 @@ nav {
   margin-top: 3em;
 }
 #con-footer .container {
-  width: 1028px;
+  max-width: 1028px;
   margin: auto;
 }
 .copyright {
