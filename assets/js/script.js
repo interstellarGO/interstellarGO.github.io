@@ -10,3 +10,12 @@ window.onscroll = function () {
   }
   prevScrollpos = currentScrollPos;
 };
+
+function myPopup() {
+  var x = document.getElementById("popup");
+  if (x.style.visibility == "hidden") {
+    x.style.visibility = "visible";
+  } else {
+    x.style.visibility = "hidden";
+  }
+}
