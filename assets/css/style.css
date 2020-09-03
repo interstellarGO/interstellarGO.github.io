@@ -1,26 +1,18 @@
 @font-face {
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local("Poppins Regular"), local("Poppins-Regular"),
-    url(/assets/Poppins-Regular.ttf) format("ttf");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
-    U+FEFF, U+FFFD;
+  font-family: Poppins;
+  src: url(/assets/Poppins-Regular.ttf);
 }
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: "Poppins";
 }
 html {
   scroll-behavior: smooth;
 }
 body {
   background-color: black;
-  font-family: "Poppins";
 }
 
 /* Navbar  */
@@ -550,11 +542,12 @@ footer .plate-footer {
 }
 .text-produk h2 {
   color: #ebebeb;
-  font-weight: 800;
+  font-weight: 600;
   font-size: 64px;
 }
 .text-produk h3 {
   color: #ebebeb;
+  font-weight: 400;
   font-size: 24px;
   width: 603px;
 }
@@ -600,7 +593,7 @@ footer .plate-footer {
   .button-pratinjau {
     position: absolute;
     left: 37%;
-    top: 155%;
+    top: 145%;
     width: 108px;
     height: 35px;
     font-size: 18px;
@@ -631,7 +624,7 @@ footer .plate-footer {
   }
 }
 /* akhir Deo */
-/* w3school */
+/* overlay */
 .container {
   position: relative;
   width: 100%;
@@ -685,7 +678,7 @@ footer .plate-footer {
   font-size: 16px;
   padding: 10px 22px;
 }
-/* w3school */
+/* overlay */
 
 /* galeri */
 .galeri {
