@@ -24,7 +24,9 @@ body {
   font-family: "Poppins";
 }
 
-/* Navbar  */
+/* ************************************* 
+* Bagian Navbar  
+*****************************************/
 .wrap-nav {
   position: fixed;
   height: auto;
@@ -146,8 +148,36 @@ nav {
 .menu-link a {
   color: white;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
+@media only screen and (min-width: 769px) {
+  .toggler {
+    display: none;
+  }
+  .hamburger {
+    display: none;
+  }
+  .menu-links {
+    visibility: visible;
+    height: fit-content;
+  }
+  .menu-links div {
+    transform: translateX(0%);
+    right: 12.5%;
+    top: 25px;
+    background: rgba(0, 0, 0, 0);
+    width: fit-content;
+    height: fit-content;
+    flex-direction: row;
+  }
+  .menu-links a {
+    margin: 0 1.5rem;
+    font-size: 1.1rem;
+  }
+}
+/* *******************************************
+* Bagian Halaman Index
+* *******************************************/
 .section {
   height: 100vh;
   width: 100%;
@@ -199,10 +229,36 @@ nav {
   color: rgb(224, 224, 224);
   cursor: pointer;
   outline: none;
+  transition: all 0.4s ease;
+}
+.readMore-button:hover,
+.readMore-button:focus {
+  background: #fff;
+  color: #000;
 }
 /* section beranda */
 .section.section1 {
   background-image: url("../img/sectionBeranda/phone.jpg");
+}
+.panah-bawah {
+  color: #fff;
+  position: absolute;
+  font-size: 17px;
+  animation-name: panahbawah;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  text-align: center;
+}
+@keyframes panahbawah {
+  0% {
+    bottom: 5vh;
+  }
+  50% {
+    bottom: 4vh;
+  }
+  100% {
+    bottom: 5vh;
+  }
 }
 .section.section2 {
   background-image: url("../img/sectionBeranda/phone-screen.jpg");
@@ -210,8 +266,9 @@ nav {
 .section.section3 {
   background-image: url("../img/sectionBeranda/phone-touch.jpg");
 }
-/* ******************************
-* SECTION TENTANG  */
+/* *****************************************
+* SECTION TENTANG  
+* *****************************************/
 .section-b {
   width: 100%;
   background-repeat: no-repeat;
@@ -344,166 +401,7 @@ nav {
   object-position: center;
   -o-object-position: center;
 }
-.social-media a {
-  margin-top: 10px;
-  text-decoration: none;
-  color: rgb(27, 114, 172);
-}
-.social-media a img.ico-small {
-  width: 30px;
-  margin-right: 5px;
-}
-@media only screen and (min-width: 769px) {
-  .toggler {
-    display: none;
-  }
-  .hamburger {
-    display: none;
-  }
-  .menu-links {
-    visibility: visible;
-    height: fit-content;
-  }
-  .menu-links div {
-    transform: translateX(0%);
-    right: 12.5%;
-    top: 25px;
-    background: rgba(0, 0, 0, 0);
-    width: fit-content;
-    height: fit-content;
-    flex-direction: row;
-  }
-  .menu-links a {
-    margin: 0 1.5rem;
-    font-size: 1.1rem;
-  }
-}
-
-/* ********************************************************************
-* Bagian Footer
-******************************************************************** */
-#con-footer {
-  background: #141414;
-}
-.foot-margin {
-  margin-top: 3em;
-}
-#con-footer .container {
-  max-width: 1028px;
-  margin: auto;
-}
-.copyright {
-  background: rgb(14, 14, 14);
-  color: #fff;
-  padding: 20px 0;
-  text-align: center;
-}
-footer .plate-footer {
-  display: flex;
-  justify-content: center;
-  color: #fff;
-  padding: 2em 0;
-}
-.plate-footer .right-side,
-.plate-footer .left-side {
-  padding: 20px;
-}
-/* *Popup */
-.popup.produk {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  visibility: hidden;
-  align-items: center;
-  justify-content: center;
-  animation-name: "popup";
-  animation-iteration-count: 1;
-  animation-duration: 2s;
-}
-@keyframes popup {
-  from {
-    opacity: 0;
-  }
-  from {
-    opacity: 1;
-  }
-}
-.btn-close {
-  top: 18.5%;
-  left: 85%;
-  position: fixed;
-  color: rgb(73, 73, 73);
-  font-size: 50px;
-}
-.popup.produk .plate {
-  width: 80%;
-  height: 65%;
-  background: rgb(255, 255, 255);
-  display: flex;
-}
-.popup.produk .plate .left-side img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-.popup.produk .plate .left-side,
-.popup.produk .plate .right-side {
-  width: 100%;
-}
-.popup.produk .plate .right-side {
-  padding: 25px;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center;
-}
-.popup.produk .plate .right-side .judul {
-  margin-bottom: 10px;
-}
-/* *popup media max 768 */
 @media only screen and (max-width: 768px) {
-  .popup.produk .plate {
-    display: block;
-  }
-  .popup.produk .plate .left-side,
-  .popup.produk .plate .right-side {
-    width: 100%;
-  }
-  .popup.produk .plate .left-side {
-    height: 60%;
-  }
-  .popup.produk .plate .right-side {
-    height: 40%;
-    padding: 20px;
-  }
-  .btn-close {
-    top: 15%;
-    left: 83%;
-    background: #fff;
-    padding: 7px 15px;
-    border-radius: 100%;
-    font-size: 30px;
-  }
-}
-
-/* *Footer */
-@media only screen and (max-width: 768px) {
-  .illustration {
-    height: 100px;
-  }
-  .text {
-    width: 300px;
-  }
-  .text h1 {
-    font-size: 42px;
-  }
-  .text p {
-    font-size: 16px;
-  }
   /* Page tentang */
   .section-b.section1 .plate-section1 .text-left {
     width: 100%;
@@ -558,29 +456,52 @@ footer .plate-footer {
   .plate-section4 .text-left {
     font-size: 20px;
   }
-  footer .plate-footer {
-    display: block;
-  }
 }
-@media only screen and (max-width: 320px) {
-  /* section praditya */
-  .illustration {
-    height: 80px;
-  }
-  .text {
-    width: 280px;
-  }
-  .text h1 {
-    font-size: 24px;
-  }
-  .text p {
-    font-size: 14px;
-  }
-  .readMore-button {
-    font-size: 17px;
-  }
+/* ********************************************************************
+* Bagian Footer
+******************************************************************** */
+#con-footer {
+  background: #141414;
 }
-/* Produk Deo */
+.foot-margin {
+  margin-top: 3em;
+}
+#con-footer .container {
+  max-width: 1028px;
+  margin: auto;
+}
+.copyright {
+  background: rgb(14, 14, 14);
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+footer .plate-footer {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  padding: 2em 0;
+}
+.plate-footer .right-side,
+.plate-footer .left-side {
+  padding: 20px;
+}
+.social-media {
+  margin-top: 10px;
+}
+.social-media a {
+  margin-top: 10px;
+  text-decoration: none;
+  color: rgb(27, 114, 172);
+}
+.social-media a img.ico-small {
+  width: 30px;
+  margin-right: 5px;
+}
+
+/* **************************
+* Produk 
+* *************************/
 #main-content {
   width: 70%;
   margin: 0 auto;
@@ -718,19 +639,6 @@ footer .plate-footer {
   height: 320px;
   object-fit: cover;
 }
-/* mini bagian3 */
-@media only screen and (max-width: 768px) {
-  .gambar2 {
-    grid-template-columns: repeat(1, 300px);
-  }
-}
-/* akhir Deo */
-/* w3school */
-.container {
-  position: relative;
-  width: 100%;
-}
-
 .image {
   opacity: 1;
   display: block;
@@ -779,8 +687,99 @@ footer .plate-footer {
   font-size: 16px;
   padding: 10px 22px;
 }
-/* w3school */
 
+/* mini bagian3 */
+@media only screen and (max-width: 768px) {
+  .gambar2 {
+    grid-template-columns: repeat(1, 300px);
+  }
+}
+/* **************************************
+* Bagian Produk>Popup 
+* ***************************************/
+.popup.produk {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  visibility: hidden;
+  align-items: center;
+  justify-content: center;
+  animation-name: "popup";
+  animation-iteration-count: 1;
+  animation-duration: 2s;
+}
+.btn-close {
+  top: 18.5%;
+  left: 85%;
+  position: fixed;
+  color: rgb(73, 73, 73);
+  font-size: 50px;
+}
+.popup.produk .plate {
+  width: 80%;
+  height: 65%;
+  background: rgb(255, 255, 255);
+  display: flex;
+}
+.popup.produk .plate .left-side img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.popup.produk .plate .left-side,
+.popup.produk .plate .right-side {
+  width: 100%;
+}
+.popup.produk .plate .right-side {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+.popup.produk .plate .right-side .judul {
+  margin-bottom: 10px;
+}
+@keyframes popup {
+  from {
+    opacity: 0;
+  }
+  from {
+    opacity: 1;
+  }
+}
+/* popup media max 768 */
+@media only screen and (max-width: 768px) {
+  .popup.produk .plate {
+    display: block;
+  }
+  .popup.produk .plate .left-side,
+  .popup.produk .plate .right-side {
+    width: 100%;
+  }
+  .popup.produk .plate .left-side {
+    height: 60%;
+  }
+  .popup.produk .plate .right-side {
+    height: 40%;
+    padding: 20px;
+  }
+  .btn-close {
+    top: 15%;
+    left: 83%;
+    background: #fff;
+    padding: 7px 15px;
+    border-radius: 100%;
+    font-size: 30px;
+  }
+}
+/* *****************************************
+* Galeri
+* ******************************************/
 /* galeri */
 .galeri {
   padding-top: 120px;
@@ -917,5 +916,43 @@ footer .plate-footer {
   }
   .img-galeri {
     grid-column: 1/13;
+  }
+}
+/* *****************************************
+*Footer 
+* ******************************************/
+@media only screen and (max-width: 768px) {
+  .illustration {
+    height: 100px;
+  }
+  .text {
+    width: 300px;
+  }
+  .text h1 {
+    font-size: 42px;
+  }
+  .text p {
+    font-size: 16px;
+  }
+  footer .plate-footer {
+    display: block;
+  }
+}
+@media only screen and (max-width: 320px) {
+  /* section praditya */
+  .illustration {
+    height: 80px;
+  }
+  .text {
+    width: 280px;
+  }
+  .text h1 {
+    font-size: 24px;
+  }
+  .text p {
+    font-size: 14px;
+  }
+  .readMore-button {
+    font-size: 17px;
   }
 }
