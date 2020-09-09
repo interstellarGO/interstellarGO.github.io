@@ -789,7 +789,6 @@ footer .plate-footer {
 /* *****************************************
 * Galeri
 * ******************************************/
-/* galeri */
 .galeri {
   padding-top: 120px;
   width: 70%;
@@ -821,13 +820,17 @@ footer .plate-footer {
   overflow: hidden;
 }
 .img-galeri img {
-  width: 100%;
+  width: 110%;
 }
 .img-1 {
   grid-column: 1/7;
 }
 .img-2 {
   grid-column: 7/10;
+}
+.img-2 img{
+  width: auto;
+  height: 110%;
 }
 .img-3 {
   grid-column: 10/13;
@@ -863,7 +866,7 @@ footer .plate-footer {
 .img-14 {
   grid-column: 10/13;
 }
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1200px) {
   .images-galeri {
     grid-template-rows: repeat(2, 200px);
   }
@@ -871,52 +874,36 @@ footer .plate-footer {
     grid-template-rows: repeat(3, 200px);
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 990px) {
   .images-galeri {
     grid-template-rows: repeat(2, 150px);
   }
   .galeri-november {
     grid-template-rows: repeat(3, 150px);
   }
+  .img-3 img{
+    width: 110%;
+    height: auto;
+  }
+  .img-4 img{
+    width: 130%;
+  }
 }
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 700px) {
   .images-galeri {
-    grid-template-rows: repeat(3, 110px);
+    grid-template-rows: repeat(5, 300px);
   }
   .galeri-november {
-    grid-template-rows: repeat(5, 110px);
+    grid-template-rows: repeat(9, 300px);
   }
-  .img-1,
-  .img-3 {
-    grid-column: 1/7;
-  }
-  .img-2,
-  .img-4 {
-    grid-column: 7/13;
-  }
-  .img-5 {
+  .img-galeri {
     grid-column: 1/13;
   }
-  .img-3 img {
+  .img-2 img{
+    width: 110%;
     height: auto;
-    width: 100%;
   }
-
-  .img-6,
-  .img-8,
-  .img-10,
-  .img-12,
-  .img-14 {
-    grid-column: 1/7;
-  }
-  .img-7,
-  .img-9,
-  .img-11,
-  .img-13 {
-    grid-column: 7/13;
-  }
-}
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 595px) {
   .images-galeri {
     grid-template-rows: repeat(5, 200px);
   }
@@ -925,6 +912,25 @@ footer .plate-footer {
   }
   .img-galeri {
     grid-column: 1/13;
+  }
+  .img-2 img{
+    width: 110%;
+    height: auto;
+  }
+}
+@media only screen and (max-width: 395px) {
+  .images-galeri {
+    grid-template-rows: repeat(5, 150px);
+  }
+  .galeri-november {
+    grid-template-rows: repeat(9, 150px);
+  }
+  .img-galeri {
+    grid-column: 1/13;
+  }
+  .img-2 img{
+    width: 110%;
+    height: auto;
   }
 }
 /* *****************************************
@@ -964,4 +970,5 @@ footer .plate-footer {
   .readMore-button {
     font-size: 17px;
   }
+}
 }
