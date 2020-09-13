@@ -536,11 +536,11 @@ footer .plate-footer {
 /* mini bagian1 */
 @media only screen and (max-width: 768px) {
   .text-produk h1 {
-    width: 350px;
+    width: 320px;
     font-size: 36px;
   }
   .text-produk p {
-    width: 350px;
+    width: 320px;
     font-size: 18px;
   }
 }
@@ -548,13 +548,14 @@ footer .plate-footer {
 
 /* bagian 2 */
 .pratinjau {
-  display: flex;
-  overflow: hidden;
+  grid-template-columns: 1fr 1fr;
+  display: grid;
+
+  justify-items: center;
 }
 @media only screen and (min-width: 768px) {
   .bagian2 {
     padding: 15% 10px 30%;
-    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -568,9 +569,6 @@ footer .plate-footer {
     color: #ebebeb;
     font-size: 24px;
     width: 100%;
-  }
-  .gambar1 {
-    width: 50%;
   }
   .gambar1 img {
     width: 100%;
@@ -587,13 +585,17 @@ footer .plate-footer {
 
 /* mini bagian2 */
 @media only screen and (max-width: 768px) {
-  .bagian2 {
-    padding-top: 120px;
+  .pratinjau {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+  .bagian.bagian2 {
     width: 100%;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    grid-row: 2/3;
+    height: auto;
   }
   .text-produk {
     text-align: center;
@@ -608,10 +610,8 @@ footer .plate-footer {
     font-size: 18px;
     width: 100%;
   }
-  .gambar1 {
-    left: 45%;
-    margin-left: -100px;
-    position: absolute;
+  div.gambar1 {
+    grid-row: 1/2;
   }
   .gambar1 img {
     width: 265px;
@@ -828,7 +828,7 @@ footer .plate-footer {
 .img-2 {
   grid-column: 7/10;
 }
-.img-2 img{
+.img-2 img {
   width: auto;
   height: 110%;
 }
@@ -881,11 +881,11 @@ footer .plate-footer {
   .galeri-november {
     grid-template-rows: repeat(3, 150px);
   }
-  .img-3 img{
+  .img-3 img {
     width: 110%;
     height: auto;
   }
-  .img-4 img{
+  .img-4 img {
     width: 130%;
   }
 }
@@ -899,76 +899,76 @@ footer .plate-footer {
   .img-galeri {
     grid-column: 1/13;
   }
-  .img-2 img{
+  .img-2 img {
     width: 110%;
     height: auto;
   }
-@media only screen and (max-width: 595px) {
-  .images-galeri {
-    grid-template-rows: repeat(5, 200px);
+  @media only screen and (max-width: 595px) {
+    .images-galeri {
+      grid-template-rows: repeat(5, 200px);
+    }
+    .galeri-november {
+      grid-template-rows: repeat(9, 200px);
+    }
+    .img-galeri {
+      grid-column: 1/13;
+    }
+    .img-2 img {
+      width: 110%;
+      height: auto;
+    }
   }
-  .galeri-november {
-    grid-template-rows: repeat(9, 200px);
+  @media only screen and (max-width: 395px) {
+    .images-galeri {
+      grid-template-rows: repeat(5, 150px);
+    }
+    .galeri-november {
+      grid-template-rows: repeat(9, 150px);
+    }
+    .img-galeri {
+      grid-column: 1/13;
+    }
+    .img-2 img {
+      width: 110%;
+      height: auto;
+    }
   }
-  .img-galeri {
-    grid-column: 1/13;
-  }
-  .img-2 img{
-    width: 110%;
-    height: auto;
-  }
-}
-@media only screen and (max-width: 395px) {
-  .images-galeri {
-    grid-template-rows: repeat(5, 150px);
-  }
-  .galeri-november {
-    grid-template-rows: repeat(9, 150px);
-  }
-  .img-galeri {
-    grid-column: 1/13;
-  }
-  .img-2 img{
-    width: 110%;
-    height: auto;
-  }
-}
-/* *****************************************
+  /* *****************************************
 *Footer 
 * ******************************************/
-@media only screen and (max-width: 768px) {
-  .illustration {
-    height: 100px;
+  @media only screen and (max-width: 768px) {
+    .illustration {
+      height: 100px;
+    }
+    .text {
+      width: 300px;
+    }
+    .text h1 {
+      font-size: 42px;
+    }
+    .text p {
+      font-size: 16px;
+    }
+    footer .plate-footer {
+      display: block;
+    }
   }
-  .text {
-    width: 300px;
+  @media only screen and (max-width: 320px) {
+    /* section praditya */
+    .illustration {
+      height: 80px;
+    }
+    .text {
+      width: 280px;
+    }
+    .text h1 {
+      font-size: 24px;
+    }
+    .text p {
+      font-size: 14px;
+    }
+    .readMore-button {
+      font-size: 17px;
+    }
   }
-  .text h1 {
-    font-size: 42px;
-  }
-  .text p {
-    font-size: 16px;
-  }
-  footer .plate-footer {
-    display: block;
-  }
-}
-@media only screen and (max-width: 320px) {
-  /* section praditya */
-  .illustration {
-    height: 80px;
-  }
-  .text {
-    width: 280px;
-  }
-  .text h1 {
-    font-size: 24px;
-  }
-  .text p {
-    font-size: 14px;
-  }
-  .readMore-button {
-    font-size: 17px;
-  }
-}
 }
