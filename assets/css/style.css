@@ -548,11 +548,11 @@ footer .plate-footer {
 /* mini bagian1 */
 @media only screen and (max-width: 768px) {
   .text-produk h1 {
-    width: 350px;
+    width: 320px;
     font-size: 36px;
   }
   .text-produk p {
-    width: 350px;
+    width: 320px;
     font-size: 18px;
   }
 }
@@ -560,13 +560,14 @@ footer .plate-footer {
 
 /* bagian 2 */
 .pratinjau {
-  display: flex;
-  overflow: hidden;
+  grid-template-columns: 1fr 1fr;
+  display: grid;
+
+  justify-items: center;
 }
 @media only screen and (min-width: 768px) {
   .bagian2 {
     padding: 15% 10px 30%;
-    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -580,9 +581,6 @@ footer .plate-footer {
     color: #ebebeb;
     font-size: 24px;
     width: 100%;
-  }
-  .gambar1 {
-    width: 50%;
   }
   .gambar1 img {
     width: 100%;
@@ -599,13 +597,17 @@ footer .plate-footer {
 
 /* mini bagian2 */
 @media only screen and (max-width: 768px) {
-  .bagian2 {
-    padding-top: 120px;
+  .pratinjau {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+  .bagian.bagian2 {
     width: 100%;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    grid-row: 2/3;
+    height: auto;
   }
   .text-produk {
     text-align: center;
@@ -620,10 +622,8 @@ footer .plate-footer {
     font-size: 18px;
     width: 100%;
   }
-  .gambar1 {
-    left: 45%;
-    margin-left: -100px;
-    position: absolute;
+  div.gambar1 {
+    grid-row: 1/2;
   }
   .gambar1 img {
     width: 265px;
