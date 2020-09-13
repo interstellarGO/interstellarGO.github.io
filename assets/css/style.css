@@ -730,7 +730,7 @@ footer .plate-footer {
   justify-content: center;
   animation-name: popup;
   animation-iteration-count: 1;
-  animation-duration: 1s;
+  animation-duration: 0.6s;
   z-index: 99;
 }
 .btn-close {
