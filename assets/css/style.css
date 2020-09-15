@@ -246,6 +246,10 @@ nav {
   animation-iteration-count: infinite;
   text-align: center;
 }
+.panah-bawah img {
+  width: 15px;
+  height: 15px;
+}
 @keyframes panahbawah {
   0% {
     bottom: 5vh;
@@ -320,10 +324,11 @@ nav {
 .plate-section2 .text-left,
 .plate-section2 .text-right {
   text-align: center;
+  font-size: 1.7rem;
 }
 .plate-section2 .text-left h1,
 .plate-section2 .text-right h1 {
-  font-size: 140px;
+  font-size: 100px;
 }
 .partner {
   text-align: center;
@@ -418,6 +423,13 @@ nav {
   }
   .partner .brand {
     display: block;
+    margin: 2em 0;
+  }
+  .partner .brand div {
+    font-size: 25px;
+    width: 45%;
+    display: inline-block;
+    margin: 10px 0;
   }
   .section-b.section2 {
     background: #000000;
@@ -556,11 +568,11 @@ nav {
 /* mini bagian1 */
 @media only screen and (max-width: 768px) {
   .text-produk h1 {
-    width: 350px;
+    width: 320px;
     font-size: 36px;
   }
   .text-produk p {
-    width: 350px;
+    width: 320px;
     font-size: 18px;
   }
 }
@@ -568,13 +580,14 @@ nav {
 
 /* bagian 2 */
 .pratinjau {
-  display: flex;
-  overflow: hidden;
+  grid-template-columns: 1fr 1fr;
+  display: grid;
+
+  justify-items: center;
 }
 @media only screen and (min-width: 768px) {
   .bagian2 {
     padding: 15% 10px 30%;
-    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -588,9 +601,6 @@ nav {
     color: #ebebeb;
     font-size: 24px;
     width: 100%;
-  }
-  .gambar1 {
-    width: 50%;
   }
   .gambar1 img {
     width: 100%;
@@ -607,13 +617,17 @@ nav {
 
 /* mini bagian2 */
 @media only screen and (max-width: 768px) {
-  .bagian2 {
-    padding-top: 120px;
+  .pratinjau {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+  .bagian.bagian2 {
     width: 100%;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    grid-row: 2/3;
+    height: auto;
   }
   .text-produk {
     text-align: center;
@@ -628,10 +642,8 @@ nav {
     font-size: 18px;
     width: 100%;
   }
-  .gambar1 {
-    left: 45%;
-    margin-left: -100px;
-    position: absolute;
+  div.gambar1 {
+    grid-row: 1/2;
   }
   .gambar1 img {
     width: 265px;
@@ -736,9 +748,10 @@ nav {
   visibility: hidden;
   align-items: center;
   justify-content: center;
-  animation-name: "popup";
+  animation-name: popup;
   animation-iteration-count: 1;
-  animation-duration: 2s;
+  animation-duration: 0.6s;
+  z-index: 99;
 }
 .btn-close {
   top: 18.5%;
@@ -775,10 +788,10 @@ nav {
 }
 @keyframes popup {
   from {
-    opacity: 0;
+    transform: scale(0);
   }
-  from {
-    opacity: 1;
+  to {
+    transform: scale(1);
   }
 }
 /* popup media max 768 */
@@ -792,17 +805,25 @@ nav {
   }
   .popup.produk .plate .left-side {
     height: 60%;
+    font-size: 15px;
   }
   .popup.produk .plate .right-side {
     height: 40%;
     padding: 20px;
+    font-size: 10px;
+  }
+  .popup.produk .plate .right-side .judul {
+    margin: 0;
+  }
+  .popup.produk .plate .right-side h1 {
+    margin: 2px;
   }
   .btn-close {
     top: 15%;
     left: 83%;
     background: #fff;
-    padding: 7px 15px;
-    border-radius: 100%;
+    padding: 0px 15px;
+    border-radius: 50%;
     font-size: 30px;
   }
 }
@@ -848,7 +869,7 @@ nav {
 .img-2 {
   grid-column: 7/10;
 }
-.img-2 img{
+.img-2 img {
   width: auto;
   height: 110%;
 }
@@ -901,11 +922,11 @@ nav {
   .galeri-november {
     grid-template-rows: repeat(3, 150px);
   }
-  .img-3 img{
+  .img-3 img {
     width: 110%;
     height: auto;
   }
-  .img-4 img{
+  .img-4 img {
     width: 130%;
   }
 }
@@ -919,7 +940,7 @@ nav {
   .img-galeri {
     grid-column: 1/13;
   }
-  .img-2 img{
+  .img-2 img {
     width: 110%;
     height: auto;
   }

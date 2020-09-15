@@ -11,11 +11,20 @@ window.onscroll = function () {
   prevScrollpos = currentScrollPos;
 };
 
-function myPopup() {
+function myPopup(parameter = 0) {
   var x = document.getElementById("popup");
-  if (x.style.visibility == "hidden") {
+  if (parameter == 1) {
+    document.getElementById("judul-text").innerHTML = " Go-Jack";
+    document.getElementById("deskripsi-text").innerHTML =
+      "Sebuah aplikasi yang kami buat dengan kerjasama Go-Jack sehingga kami bisa merealisasikan impian serta idealisme mereka.";
+  } else {
+    document.getElementById("judul-text").innerHTML = "Contoh Judul";
+  }
+  if (x.style.display == "none") {
+    x.style.display = "flex";
     x.style.visibility = "visible";
   } else {
+    x.style.display = "none";
     x.style.visibility = "hidden";
   }
 }
