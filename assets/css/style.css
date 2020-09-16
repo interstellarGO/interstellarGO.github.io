@@ -11,7 +11,6 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Poppins";
-  overflow: h;
 }
 html {
   scroll-behavior: smooth;
@@ -471,37 +470,37 @@ nav {
   width: 70%;
   margin: 0 auto;
 }
-.plate-footer{
+.plate-footer {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(3,auto);
+  grid-template-rows: repeat(3, auto);
   color: white;
   padding: 50px 0;
   column-gap: 2em;
 }
-.plate-footer h1{
+.plate-footer h1 {
   font-weight: 600;
   font-size: 2rem;
   padding-bottom: 0.2em;
 }
-.footer-descript{
+.footer-descript {
   grid-row: 2/3;
   font-size: 1rem;
   padding-bottom: 1.3em;
 }
-.social-media{
+.social-media {
   grid-row: 3/4;
 }
-.plate-footer h3{
+.plate-footer h3 {
   align-self: end;
-  font-weight:600;
+  font-weight: 600;
   font-size: 1.3rem;
   padding-bottom: 0.15em;
 }
-.table-contact{
+.table-contact {
   text-align: left;
 }
-.table-contact td{
+.table-contact td {
   padding-left: 15px;
 }
 #con-footer {
@@ -514,17 +513,17 @@ nav {
   padding: 20px 0;
   text-align: center;
 }
-.social-icon{
+.social-icon {
   margin-top: 0.5em;
 }
-.social-icon a{
+.social-icon a {
   text-decoration: none;
   margin-right: 25px;
 }
-.ico-small{
+.ico-small {
   width: 2rem;
 }
-.social-icon a:hover{
+.social-icon a:hover {
   opacity: 0.3;
 }
 
@@ -628,6 +627,7 @@ nav {
     align-items: center;
     grid-row: 2/3;
     height: auto;
+    margin-bottom: 150px;
   }
   .text-produk {
     text-align: center;
@@ -666,6 +666,7 @@ nav {
   justify-content: center;
   width: 100%;
   height: fit-content;
+  margin-bottom: 300px;
 }
 .gambar2 {
   display: grid;
@@ -955,7 +956,7 @@ nav {
   .img-galeri {
     grid-column: 1/13;
   }
-  .img-2 img{
+  .img-2 img {
     width: 110%;
     height: auto;
   }
@@ -970,7 +971,7 @@ nav {
   .img-galeri {
     grid-column: 1/13;
   }
-  .img-2 img{
+  .img-2 img {
     width: 110%;
     height: auto;
   }
@@ -979,22 +980,21 @@ nav {
 *Footer 
 * ******************************************/
 @media only screen and (max-width: 1080px) {
-  .plate-footer{
+  .plate-footer {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(6,auto);
+    grid-template-rows: repeat(6, auto);
     text-align: center;
   }
-  .table-contact{
+  .table-contact {
     width: auto;
     margin: 0 auto;
   }
-  .footer-descript2{
+  .footer-descript2 {
     grid-row: 5/6;
   }
-  .social-media{
+  .social-media {
     padding-bottom: 30px;
   }
-
 
   .illustration {
     height: 100px;
@@ -1009,20 +1009,20 @@ nav {
     font-size: 16px;
   }
 }
-@media only screen and (max-width: 600px){
-  #con-footer .container{
+@media only screen and (max-width: 600px) {
+  #con-footer .container {
     width: 90%;
   }
-  .table-contact td{
+  .table-contact td {
     padding-left: 5px;
   }
-  .footer-descript{
+  .footer-descript {
     font-size: 0.9rem;
   }
-  .plate-footer{
+  .plate-footer {
     font-size: 0.9rem;
   }
-  .copyright{
+  .copyright {
     font-size: 0.9rem;
   }
 }
