@@ -469,7 +469,7 @@ nav {
 ******************************************************************** */
 #con-footer .container {
   width: 70%;
-  margin: 3em auto 0 auto;
+  margin: 0 auto;
 }
 .plate-footer{
   display: grid;
